@@ -1,12 +1,10 @@
 import os
-import signal
 from counter import counter
 from flask import Flask, request
 
 
 app = Flask(__name__)
 
-signal.signal(signal.SIGINT, lambda s, f: os._exit(0))
 
 @app.route('/', methods=['GET'])
 def post_route():
