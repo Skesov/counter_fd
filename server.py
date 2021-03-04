@@ -1,9 +1,12 @@
+import os
+import signal
 from counter import counter
 from flask import Flask, request
 
 
 app = Flask(__name__)
 
+signal.signal(signal.SIGINT, lambda s, f: os._exit(0))
 
 @app.route('/', methods=['GET'])
 def post_route():
@@ -20,4 +23,4 @@ def post_route():
 
 
 if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0')
+    app.run(debug=False, port=os.getenv('PORT'), host='0.0.0.0')
