@@ -17,6 +17,3 @@ def count_fd():
 
         return error
 
-
-if __name__ == "__main__":
-    print count_fd()
