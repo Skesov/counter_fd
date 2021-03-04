@@ -6,6 +6,8 @@ else
     TAG="$TRAVIS_BRANCH"
 fi
 
+echo $TRAVIS_REPO_SLUG
+docker_repo_name='skesov/counter_fd'
 
-docker build -f Dockerfile -t ${TRAVIS_REPO_SLUG,,}:$TAG .
-docker push ${TRAVIS_REPO_SLUG,,}:$TAG
+docker build -f Dockerfile -t $docker_repo_name:$TAG .
+docker push $docker_repo_name:$TAG
