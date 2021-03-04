@@ -137,5 +137,9 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
+
+
 .vscode
 README.txt
+.travis/
+.travis.yml
