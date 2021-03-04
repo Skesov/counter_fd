@@ -16,3 +16,7 @@ def count_fd():
     except Exception as error:
 
         return error
+
+
+if __name__ == "__main__":
+    print count_fd()
